@@ -92,4 +92,37 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
+
+	int List::get(int g)
+{
+	if (g < 1 or g > num_elements) //if the location is invalid
+	     throw out_of_range("List::get("+to_string(g)+") failed. (valid indices are 1 to 		     "+to_string(num_elements)+")");//throw an "out_of_range" exception
+	
+	
+	Node* getPtr = frontPtr;
+	
+	if(g == 1)
+	{
+	  getPtr->data;
+	}
+
+	else
+	 {  
+	
+	    int loc = 1; 
+	    while( loc != g) //get pointer to gth node
+	     {
+		getPtr = getPtr->link;
+		loc++;
+	     }
+	
+	  getPtr->data;
+  
+          }//end else
+
+     num_elements++;
+	return getPtr->data;
+ }
+
+
 	
