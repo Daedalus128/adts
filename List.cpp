@@ -100,11 +100,13 @@ void List::remove(int k)
 	
 	
 	Node* getPtr = frontPtr;
-	
+	int acq = 0;
 	if(g == 1)
 	{
 	  getPtr->data;
+	  acq = getPtr->data;
 	}
+
 
 	else
 	 {  
@@ -119,10 +121,17 @@ void List::remove(int k)
 	  getPtr->data;
   
           }//end else
-
-     num_elements++;
-	return getPtr->data;
+     acq = getPtr->data;
+	return acq;
  }
 
+void List::clear()
+{
+	 while (size() > 0)
+	{ 
+	  remove(size());
+	}
+
+}
 
 	
